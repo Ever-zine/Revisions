@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Révisions</title>
+</head>
+<script>
+    //Déclaration des variables
+    let events = [
+        ['17 juin 1789', 'Proclamation de l Assemblée Nationale par les États généraux ', 'proclamation an'],
+        ["20 juin 1789", "Serment du jeu de Paume into constitution", "serment du jeu de paume"],
+        ["14 juillet 1789", "Prise de la Bastille par les sans-culottes", "prise de la bastille"],
+        ["nuit 4 5 août 1789", "Fin du système féodal / abolition des privilèges par l'Assemblée Nationale", "fin du système féodal"],
+        ["26 août 1789", "DDHC", "ddhc"],
+        ["14 juillet 1790", "Fête de la fédération, roi porte cocarde mais reste un peu à l'écart", "fête de la fédération"],
+        ["21 juin 1791", "Fuite du roi à Varennes", "fuite du roi à Varennes"],
+        ["3 septembre 1730", "Nouvelle constitution", "constitution"],
+        ["20 août 1792", "Déclaration de guerre à la Prussse", "déclaration de guerre à la Prusse"],
+        ["30 août 1792", "Prise des tuileries", "prise des tuileries"],
+        ["21 septembre 1792", "Proclamation de la première République", "première république"],
+        ["hiver 1792 1793", "Procès du roi", "procès du roi"],
+        ["21 janvier 1793", "Exécution de Louis XVI", "exécution du roi"],
+        ["septembre 1793 juillet 1794", "Terreur", "terreur"]
+    ]
+    let tours = 0
+    let continuer = true
+    let reponse
+    //Function de nombre random
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    while (continuer) {
+        randomNumber = getRandomInt(1);
+        question = events[getRandomInt(14)];
+        reponse = prompt(question[randomNumber]);
+        if (randomNumber == 0) {
+            bonneReponse = question[2];
+            if (reponse == bonneReponse) {
+                console.log("gg")
+            } else if (reponse == "stop") {
+                continuer = false;
+            } else {
+                alert(question[1]);
+            }
+        } else if (randomNumber = 1) {
+            bonneReponse = question[0];
+            if (reponse == bonneReponse) {
+                console.log("gg")
+            } else if (reponse == "stop") {
+                continuer = false;
+            } else {
+                alert(question[0])
+            }
+        }
+    }
+    console.log("yessay");
+</script>
+<body>
+    
+</body>
+</html>
